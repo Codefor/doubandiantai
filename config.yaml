@@ -1,0 +1,14 @@
+name: doubandiantai
+version: 1
+handle:
+- compress: if ( out_header["Content-Length"] >= 200 ) compress
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mine/playlist" ) goto "/j/mine/playlist.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mine/log" ) goto "/j/mine/log.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "j/mp3" ) goto "j/mp3.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "html5_login" ) goto "html5_login.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/statement" ) goto "/statement.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/partner/logout" ) goto "/partner/logout.php"
+cron:
+- description: 定期更新
+  url: syncmp3.php
+  schedule: every 10 mins
