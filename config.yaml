@@ -8,7 +8,13 @@ handle:
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "html5_login" ) goto "html5_login.php"
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "/statement" ) goto "/statement.php"
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "/partner/logout" ) goto "/partner/logout.php"
+
 cron:
-- description: 定期更新
-  url: syncmp3.php
-  schedule: every 10 mins
+    - description: 定期更新mp3 status
+      url: syncmp3.php
+      schedule: every 10 hours
+      timezone: Beijing
+    - description: 定期更新TOP subject
+      url: fetchNewSubject.php
+      schedule: every 24 hours
+      timezone: Beijing

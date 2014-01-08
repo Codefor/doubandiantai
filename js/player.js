@@ -605,7 +605,18 @@ var Zepto = function() {
                 return $.user.data && $.user.data[ak]
             }
             return $.user.data
-        }};
+        }};   
+    $.context = {set: function(ak) {
+            $.user.data = ak;
+            $.ui.updateStatus()
+        },get: function(ak) {
+            if (ak) {
+                return $.user.data && $.user.data[ak]
+            }
+            return $.user.data
+        },toString:function(){
+            return $.context
+        }};    
     $.ui = {init: function() {
             if (f && ac) {
                 ad = new DBFM.swfPlayer(H, {swfLocation: Z})

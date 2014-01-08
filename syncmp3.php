@@ -41,6 +41,10 @@ $sql = "SELECT sid,ssid,url FROM songs WHERE syncmp3 = 0 ORDER BY RAND() DESC LI
 //$sql = "SELECT sid,ssid,url FROM songs WHERE syncmp3 = 0 ORDER BY RAND() DESC";
 $songs = $mysql->getData( $sql );
 
+if($songs === NULL){
+    die('everything is ok.');
+}
+
 require_once("qiuniu/io.php");
 require_once("qiuniu/rs.php");
 $bucket = "doubandiantai";
