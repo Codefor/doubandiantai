@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/index.php</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+      <changefreq>always</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+    
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/statement.php</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+    
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/statement</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+    
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/searchsubject.php</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+    
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/404.php</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/404</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+   <url>
+
+      <loc>http://doubandiantai.sinaapp.com/stat</loc>
+
+      <lastmod>2014-01-14</lastmod>
+
+   </url>
+    
+
+</urlset> 
