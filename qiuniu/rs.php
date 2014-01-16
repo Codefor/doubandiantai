@@ -9,6 +9,12 @@ class Qiniu_RS_GetPolicy
 {
 	public $Expires;
 
+    public function SetExpires($expire){
+        if((int)$expire > 0){
+            $this->Expires = (int)$expire;
+        }
+    }
+    
 	public function MakeRequest($baseUrl, $mac) // => $privateUrl
 	{
 		$deadline = $this->Expires;

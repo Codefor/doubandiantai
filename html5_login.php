@@ -2,23 +2,6 @@
 list($ROOT,) = explode($_SERVER['HTTP_APPNAME'],dirname(__FILE__));
 include_once(sprintf("%s%s/%s/inc/function.php",$ROOT,$_SERVER['HTTP_APPNAME'],$_SERVER['HTTP_APPVERSION']));
 
-function login($doubanurl,$cookies,$postdata){
-    $curl = doubanCurl($doubanurl);
-
-    curl_setopt($curl, CURLOPT_HTTPHEADER,array('Content-Type: application/x-www-form-urlencoded')); 
-    curl_setopt($curl, CURLOPT_HEADER, true);
-    curl_setopt($curl, CURLOPT_COOKIE, $cookies);
-    curl_setopt($curl, CURLOPT_POST, 1);
-	curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    
-    curl_setopt($curl, CURLOPT_REFERER, "http://douban.fm/html5_login");
-
-    $raw_data = curl_exec($curl);
-
-    curl_close($curl);
-    return $raw_data;
-}
-
 if(isset($_POST) && !empty($_POST)){
     $postdata = "";
     foreach($_POST as $k=>$v){

@@ -2,19 +2,23 @@ name: doubandiantai
 version: 1
 handle:
 - compress: if ( out_header["Content-Length"] >= 200 ) compress
+- errordoc: 404 /404
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mine/playlist" ) goto "/j/mine/playlist.php"
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mine/log" ) goto "/j/mine/log.php"
-- rewrite:  if ( !is_dir() && !is_file() && path ~ "j/mp3" ) goto "j/mp3.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mine/subject" ) goto "/j/mine/subject.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "/j/mp3" ) goto "/j/mp3.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "stat$" ) goto "stat.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "statement" ) goto "statement.php"
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "html5_login" ) goto "html5_login.php"
-- rewrite:  if ( !is_dir() && !is_file() && path ~ "/statement" ) goto "/statement.php"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "404$" ) goto "404.php"
 - rewrite:  if ( !is_dir() && !is_file() && path ~ "/partner/logout" ) goto "/partner/logout.php"
-
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "j/mine/song" ) goto "j/mine/song.php"
 cron:
-    - description: 定期更新mp3 status
-      url: syncmp3.php
-      schedule: every 10 hours
-      timezone: Beijing
-    - description: 定期更新TOP subject
-      url: fetchNewSubject.php
-      schedule: every 24 hours
-      timezone: Beijing
+- description: 定期更新mp3 status
+  url: syncmp3.php
+  schedule: every 10 hours
+  timezone: Beijing
+- description: 定期更新TOP subject
+  url: fetchNewSubject.php
+  schedule: every 24 hours
+  timezone: Beijing

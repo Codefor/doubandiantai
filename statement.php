@@ -1,5 +1,38 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="http://img3.douban.com/f/shire/c976312f9f0b3e5a88b9babea0b104b80e3a7dc6/css/douban.css" rel="stylesheet" type="text/css">
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+         <meta name="keywords" content="豆瓣7台,doubanfm,电台,移动,app,音乐,智能,推荐,豆瓣FM,豆瓣,FM,豆瓣电台," />
+		<meta name="description" content="豆瓣7台 是基于豆瓣FM的你专属的个性化音乐收听工具。它简单方便，打开就能收听。在收听过程中，你可以用“红心”、“垃圾桶”、“循环”、
+“重放”、“跳过”等操作 告诉 豆瓣7台 你的喜好。豆瓣7台 将在豆瓣FM的基础上，根据你的操作和反馈，从海量曲库中自动发现并播出符合你音乐口味的歌曲。" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>免责声明 - 豆瓣7台</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="http://img3.douban.com/f/shire/c976312f9f0b3e5a88b9babea0b104b80e3a7dc6/css/douban.css" rel="stylesheet" type="text/css">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-46670605-2', 'sinaapp.com');
+          ga('send', 'pageview');
+
+		</script>
+        
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?a7b3d67bafdcda2386e88e1afc5a357b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+    </head>
+    <body>
 <div id="content">
     
     <h1>免责声明</h1>
@@ -11,8 +44,8 @@
 <span class="wrap"><h3>序</h3></span>
 　　豆瓣FM是一款非常优秀的网络电台产品。其特色在于精准的推荐和简洁的UI操作。<br><br>
 　　然而，豆瓣FM还不能针对用户做一些特殊的定制操作，比如单曲循环，比如情感自适应音乐等等。个人曾通过豆油跟豆瓣FM沟通，建议没有被采纳，这可以理解。<br><br>        
-　　http://doubandiantai.sinaapp.com 是基于豆瓣FM扩展的音乐电台服务。所有音乐数据、推荐等均来源于网络(包括豆瓣FM等)。http://doubandiantai.sinaapp.com 在豆瓣FM原有的喜欢、垃圾桶、不喜欢的基础上，新增了单曲循环、重新播放操作，尤其适用于把豆瓣FM作为背景音乐的同学使用。<br><br>    
-　　如有侵权，请告知hk.yuhe#gmail.com (将#替换成@)进行处理。<br>        
+　　豆瓣7台 是基于豆瓣FM扩展的音乐电台服务。所有音乐数据、推荐等均来源于网络(包括豆瓣FM等)。豆瓣7台 在豆瓣FM原有的喜欢、垃圾桶、不喜欢的基础上，新增了单曲循环、重新播放操作，尤其适用于把豆瓣FM作为背景音乐的同学使用。<br><br>    
+　　如觉侵权，请告知hk.yuhe#gmail.com (将#替换成@)进行处理。<br>        
 　　以下内容转自:http://www.douban.com/about/disclaimer<br>
             
 <span class="wrap"><h3>总则</h3></span>            
@@ -44,3 +77,5 @@
         </div>
     </div>
 </div>
+    </body>
+</html>

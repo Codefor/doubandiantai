@@ -331,18 +331,35 @@ var Zepto = function() {
                 return 0
             }
             if (d) {
+                p = this
                 this.currentSong = d;
-                console.log(d.url)
-                qiniuurl = "http://doubandiantai.u.qiniudn.com/" + d.url.split("/")[d.url.split("/").length-1]
-                this.audio.setAttribute("src", qiniuurl);
-                this.fire("song::start", {song: d})
-                if(ga){
-                	ga('send', 'event', 'Audio', 'play', d.ssid + '-' + d.title);
+                
+                if(d.album.match(/\d+/) != undefined){
+                    $.get("j/mine/subject?id="+d.album.match(/\d+/)[0],function(o){})
                 }
+                
+                key = d.url.match(/\/(p.*\.mp3)/)[1]
+                //qiniuurl = "http://doubandiantai.u.qiniudn.com/" + d.url.split("/")[d.url.split("/").length-1]
+                
+                $.getJSON("j/mine/song?k="+key,function(s){
+                    if(s.r == 0){
+                        p.audio.setAttribute("src", s.url);
+                        p.fire("song::start", {song: d})
+                        if(ga){
+                            ga('send', 'event', 'Audio', 'play', d.ssid + '-' + d.title);
+                        }
+                    }else{
+                        p.nextSong();
+                    }
+                })
+                
             }
             this.audio.play();
             return this
         },pause: function() {
+            if(ga){
+                	ga('send', 'event', 'Audio', 'pause', this.currentSong.ssid + '-' + this.currentSong.title);
+            }
             this.audio.pause()
         },volume: function(d) {
             this.audio.volume = d
@@ -616,7 +633,17 @@ var Zepto = function() {
             return $.user.data
         },toString:function(){
             return $.context
-        }};    
+        }};
+    $.subject = {fetch:function(i){      
+        $.getJSON("/j/mine/subject?id="+ss[i],function(e){
+            console.log(i,e)
+        });
+        
+        if(i< ss.length){
+            i += 1
+            setTimeout("$.subject.fetch("+ i +")",5000)
+        }
+    }};    
     $.ui = {init: function() {
             if (f && ac) {
                 ad = new DBFM.swfPlayer(H, {swfLocation: Z})
@@ -676,7 +703,7 @@ var Zepto = function() {
             ad.on(F, function(ak) {
                 $.extend(ak.song, {login: $.user.data,loop:ad.loop});
                 M = ak.song;
-                document.title = ak.song.title + "-豆瓣FM";
+                document.title = ak.song.title + "- 豆瓣7台";
                 $.ui.render(k, E, ak.song)
             });
             ad.on(a, function(ak) {
@@ -710,6 +737,7 @@ var Zepto = function() {
             window.scrollTo(0, 1)
         }, 0)
     }, false);
+    
     setTimeout(function() {
         var ak = $(".loading", k);
         if (ak.dom.length) {

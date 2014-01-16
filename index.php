@@ -14,13 +14,13 @@ if(isset($_COOKIE['ck']) && isset($_COOKIE['dbcl2'])){
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <meta name="keywords" content="doubandiantai,doubanfm,电台,移动,app,音乐,智能,推荐,豆瓣FM,豆瓣,FM,豆瓣电台," />
-		<meta name="description" content="doubandiantai是基于豆瓣FM的你专属的个性化音乐收听工具。它简单方便，打开就能收听。在收听过程中，你可以用“红心”、“垃圾桶”、“循环”
-“重放”、“跳过”等操作 告诉doubandiantai你的喜好。豆瓣FM将根据你的操作和反馈，从海量曲库中自动发现并播出符合你音乐口味的歌曲。" />
+        <meta name="keywords" content="豆瓣7台,doubanfm,电台,移动,app,音乐,智能,推荐,豆瓣FM,豆瓣,FM,豆瓣电台," />
+		<meta name="description" content="豆瓣7台 是基于豆瓣FM的你专属的个性化音乐收听工具。它简单方便，打开就能收听。在收听过程中，你可以用“红心”、“垃圾桶”、“循环”、
+“重放”、“跳过”等操作 告诉 豆瓣7台 你的喜好。豆瓣7台 将在豆瓣FM的基础上，根据你的操作和反馈，从海量曲库中自动发现并播出符合你音乐口味的歌曲。" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
         <meta name="HandheldFriendly" content="True">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <title>豆瓣FM</title>
+        <title>豆瓣7台</title>
         <style type="text/css">
             html,body {
                 height:100%
@@ -310,6 +310,27 @@ if(isset($_COOKIE['ck']) && isset($_COOKIE['dbcl2'])){
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://img3.douban.com/pics/fm/fm_logo_114x114.png" />
         <link rel="apple-touch-icon-precomposed" href="http://img5.douban.com/pics/fm/fm_logo_57x57.png" />
         <link rel="shortcut icon" href="http://douban.fm/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-46670605-2', 'sinaapp.com');
+          ga('send', 'pageview');
+
+		</script>
+        
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?a7b3d67bafdcda2386e88e1afc5a357b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
     </head>
 
     <body>
@@ -334,6 +355,7 @@ if(isset($_COOKIE['ck']) && isset($_COOKIE['dbcl2'])){
             <span>豆瓣FM for Me Beta
             | <a href="http://m.douban.com/fm/download" target="_blank">关于我们</a>
             | <a href="/statement" target="_blank">免责声明</a>
+            | <a href="/stat" target="_blank">数据统计</a>
             </span>
         </div>
 
@@ -418,16 +440,7 @@ if(isset($_COOKIE['ck']) && isset($_COOKIE['dbcl2'])){
         $.playlist.setChannelId(Math.random() < 0.9 ? 0:p[Math.round(Math.random()*p.length)]);
     </script>
         
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
-      ga('create', 'UA-46670605-2', 'sinaapp.com');
-      ga('send', 'pageview');
-
-	</script>
         
     <span style="display:none">
         <script type="text/javascript">

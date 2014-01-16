@@ -5,8 +5,7 @@ include_once(sprintf("%s%s/%s/inc/function.php",$ROOT,$_SERVER['HTTP_APPNAME'],$
 $topSubjectUrl = "http://music.douban.com/chart";
 $curl = doubanCurl($topSubjectUrl);
 curl_setopt($curl, CURLOPT_REFERER, "http://music.douban.com");
-$raw_data = curl_exec($curl);
-curl_close($curl);
+$raw_data = doubanContent($curl);
 
 $raw_data = str_replace("\n","",$raw_data);
 $raw_data = str_replace("\r","",$raw_data);
